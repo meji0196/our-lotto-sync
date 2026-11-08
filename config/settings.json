@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "autoApproveStrictSpringExtraDates": true,
+  "createGitHubIssuesForPendingNotices": true,
+  "monitorSources": [
+    "https://lotto.ctbcbank.com/news{ROC_YEAR}.htm"
+  ]
+}

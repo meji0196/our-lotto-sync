@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>奧爾樂透｜共用開獎日曆資料服務</title>
+<style>
+:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC",Arial,sans-serif;background:#f6f7f8;color:#2b343d}
+body{max-width:660px;margin:0 auto;padding:35px 22px;line-height:1.7}
+h1{font-size:22px}.box{background:#fff;border:1px solid #d6dce2;border-radius:16px;padding:20px;margin:20px 0}
+a{color:#1863af}code{overflow-wrap:anywhere}small{color:#607080}
+</style>
+</head><body>
+<h1>奧爾樂透｜開獎日曆資料服務</h1>
+<p>供網頁版、iOS 與 Android 共用的公開唯讀資料。管理及官方公告核對在 GitHub Repository 進行，不在一般選號 App 內操作。</p>
+<div class="box"><p><strong>資料狀態</strong>：<span id="state">查詢中</span></p><p>最近發布：<span id="issued">—</span></p><p>特殊開獎日：<span id="extras">—</span></p><p><a href="./aoer-schedule.json">檢視 JSON API</a></p><small>若公告無法驗證，資料會維持上次確認的版本；一般使用者投注前仍應以台彩正式公告及投注機為準。</small></div>
+<script>
+fetch('./feed-status.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{
+ document.getElementById('state').textContent='公開資料可用';
+ document.getElementById('issued').textContent=d.issuedAt||'—';
+ document.getElementById('extras').textContent=String(d.totalAddedDates??'—');
+}).catch(()=>{document.getElementById('state').textContent='目前無法讀取狀態';});
+</script>
+</body></html>
