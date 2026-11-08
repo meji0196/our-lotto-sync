@@ -1,0 +1,41 @@
+name: Publish administrator-confirmed draw dates
+
+on:
+  push:
+    paths:
+      - 'config/approved-calendar.json'
+      - 'config/approved-promotions.json'
+      - 'state/auto-approved.json'
+      - 'scripts/core.py'
+      - 'scripts/publish.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: our-lotto-calendar-writes
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run validation tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate and build cross-platform calendar JSON
+        run: python scripts/publish.py
+      - name: Commit public feed if semantic calendar changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/aoer-schedule.json docs/feed-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: publish verified draw calendar'
+            git push
+          fi

@@ -1,0 +1,48 @@
+name: Official lottery notices and calendar sync
+
+on:
+  schedule:
+    # 09:17 and 21:17 Taiwan time (UTC+8), avoids the top-of-hour load peak.
+    - cron: '17 1,13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: our-lotto-calendar-writes
+  cancel-in-progress: false
+
+jobs:
+  monitor-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test schema, parsing and safety conditions
+        run: python -m unittest discover -s tests -v
+      - name: Read official announcements and propose safe updates
+        run: python scripts/monitor.py
+      - name: Generate validated public JSON feed
+        run: python scripts/publish.py
+      - name: Report unverified announcements to repository Issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/create_issues.py
+      - name: Commit approved feeds and notice states
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/ state/
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: refresh verified lottery calendar and notices'
+            git push
+          else
+            echo 'No changes; existing public feed remains intact.'
+          fi
