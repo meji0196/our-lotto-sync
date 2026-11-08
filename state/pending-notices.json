@@ -1,4 +1,29 @@
 {
   "schemaVersion": 1,
-  "notices": []
+  "notices": [
+    {
+      "url": "https://lotto.ctbcbank.com/news1150126.htm",
+      "title": "115年電腦型彩券春節加碼促銷活動實施辦法",
+      "detectedAt": "2026-11-08T04:00:26Z",
+      "reason": "公告需人工確認：活動獎號、取消日期或未支援公告格式",
+      "issueCreatedAt": null,
+      "skipInitialIssue": true
+    },
+    {
+      "url": "https://lotto.ctbcbank.com/news1150526.htm",
+      "title": "公告115年電腦型彩券端午加碼促銷活動實施辦法等相關事宜",
+      "detectedAt": "2026-11-08T04:00:26Z",
+      "reason": "公告需人工確認：活動獎號、取消日期或未支援公告格式",
+      "issueCreatedAt": null,
+      "skipInitialIssue": true
+    },
+    {
+      "url": "https://lotto.ctbcbank.com/news1150908.htm",
+      "title": "公告115年電腦型彩券中秋加碼促銷活動實施辦法等相關事宜",
+      "detectedAt": "2026-11-08T04:00:26Z",
+      "reason": "公告需人工確認：活動獎號、取消日期或未支援公告格式",
+      "issueCreatedAt": null,
+      "skipInitialIssue": true
+    }
+  ]
 }
