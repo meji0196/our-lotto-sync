@@ -1,0 +1,22 @@
+奧爾樂透同步服務 V1.2 - Pilio 3/4 星彩獎號解析修正
+
+請打開 GitHub Desktop 的 Repository -> Show in Explorer，將這個 ZIP 解壓後
+our-lotto-sync/ 資料夾內的以下三個檔案複製到 GitHub Repository 根目錄對應路徑：
+
+  scripts/pilio_preview.py                   (覆蓋舊程式)
+  .github/workflows/pilio-preview.yml        (覆蓋舊工作流程)
+  tests/test_pilio_preview.py                (新增單元測試)
+
+其他 Repository 檔案都不要刪除；尤其不要把舊的 early-draws.json 手動覆蓋上去。
+
+GitHub Desktop：在 Summary 填 Fix Pilio 3D 4D parsing -> Commit to main -> Push origin
+GitHub 網頁：Actions -> Pilio early draw previews (unverified) -> Run workflow
+成功後檢查：
+https://meji0196.github.io/our-lotto-sync/early-draws.json
+
+2026-11-09 正確數字：
+3星彩：0, 7, 2
+4星彩：5, 5, 7, 4
+
+注意：此來源未經台彩官方驗證，verified 仍為 false，不可做正式派彩。
+若 Pilio 網頁格式變動，程式會拒絕猜測星彩獎號，並移除舊錯誤星彩預覽資料。
