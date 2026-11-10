@@ -1,6 +1,57 @@
 {
   "schemaVersion": 1,
-  "issuedAt": null,
+  "issuedAt": "2026-11-10T18:18:42+08:00",
   "purpose": "PRELIMINARY_DISPLAY_ONLY",
-  "games": {}
+  "games": {
+    "539": {
+      "date": "2026-11-09",
+      "numbers": [
+        7,
+        9,
+        28,
+        30,
+        33
+      ],
+      "special": null,
+      "source": "pilio",
+      "verified": false
+    },
+    "power": {
+      "date": "2026-11-09",
+      "numbers": [
+        6,
+        20,
+        27,
+        28,
+        35,
+        36
+      ],
+      "special": 2,
+      "source": "pilio",
+      "verified": false
+    },
+    "3star": {
+      "date": "2026-11-09",
+      "numbers": [
+        5,
+        7,
+        4
+      ],
+      "special": null,
+      "source": "pilio",
+      "verified": false
+    },
+    "4star": {
+      "date": "2026-11-09",
+      "numbers": [
+        0,
+        7,
+        2,
+        5
+      ],
+      "special": null,
+      "source": "pilio",
+      "verified": false
+    }
+  }
 }
