@@ -1,0 +1,31 @@
+name: Pilio early draw previews (unverified)
+on:
+  schedule:
+    # 20:05-22:55 Taipei time (UTC+8); github schedules may be delayed.
+    - cron: '5,15,25,35,45,55 12-14 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pilio-early-draws
+  cancel-in-progress: false
+jobs:
+  retrieve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse and validate third-party preliminary numbers
+        run: python3 scripts/pilio_preview.py
+      - name: Publish preliminaries only if changed
+        run: |
+          if git diff --quiet -- docs/early-draws.json; then
+            echo "No updates"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/early-draws.json
+          git commit -m "Update unverified draw previews"
+          git pull --rebase origin main
+          git push origin HEAD:main
