@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "issuedAt": "2026-11-10T18:37:25+08:00",
+  "issuedAt": "2026-11-10T19:36:47+08:00",
   "purpose": "PRELIMINARY_DISPLAY_ONLY",
   "games": {
     "539": {
@@ -33,9 +33,9 @@
     "3star": {
       "date": "2026-11-09",
       "numbers": [
-        5,
+        0,
         7,
-        4
+        2
       ],
       "special": null,
       "source": "pilio",
@@ -44,10 +44,10 @@
     "4star": {
       "date": "2026-11-09",
       "numbers": [
-        0,
+        5,
+        5,
         7,
-        2,
-        5
+        4
       ],
       "special": null,
       "source": "pilio",
