@@ -1,18 +1,32 @@
 {
   "schemaVersion": 1,
-  "issuedAt": "2026-11-20T04:27:53+08:00",
+  "issuedAt": "2026-11-21T04:01:30+08:00",
   "purpose": "PRELIMINARY_DISPLAY_ONLY",
   "games": {
     "539": {
-      "date": "2026-11-19",
+      "date": "2026-11-20",
       "numbers": [
-        2,
-        10,
-        23,
-        24,
-        37
+        3,
+        5,
+        7,
+        11,
+        20
       ],
       "special": null,
+      "source": "pilio",
+      "verified": false
+    },
+    "lotto649": {
+      "date": "2026-11-20",
+      "numbers": [
+        1,
+        2,
+        4,
+        12,
+        16,
+        38
+      ],
+      "special": 44,
       "source": "pilio",
       "verified": false
     },
@@ -31,10 +45,10 @@
       "verified": false
     },
     "3star": {
-      "date": "2026-11-19",
+      "date": "2026-11-20",
       "numbers": [
         8,
-        4,
+        3,
         1
       ],
       "special": null,
@@ -42,11 +56,11 @@
       "verified": false
     },
     "4star": {
-      "date": "2026-11-19",
+      "date": "2026-11-20",
       "numbers": [
-        8,
-        7,
         1,
+        4,
+        7,
         9
       ],
       "special": null,
