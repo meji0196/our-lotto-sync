@@ -1,20 +1,23 @@
 {
   "schemaVersion": 1,
-  "issuedAt": "2026-11-21T04:01:30+08:00",
+  "issuedAt": "2026-11-21T21:38:12+08:00",
   "purpose": "PRELIMINARY_DISPLAY_ONLY",
   "games": {
     "539": {
-      "date": "2026-11-20",
+      "date": "2026-11-21",
       "numbers": [
-        3,
-        5,
         7,
-        11,
-        20
+        19,
+        20,
+        28,
+        32
       ],
       "special": null,
-      "source": "pilio",
-      "verified": false
+      "source": "our-lotto",
+      "upstreamSource": "third",
+      "verified": false,
+      "period": "",
+      "sourceUrl": "https://www.pilio.idv.tw/"
     },
     "lotto649": {
       "date": "2026-11-20",
@@ -27,8 +30,11 @@
         38
       ],
       "special": 44,
-      "source": "pilio",
-      "verified": false
+      "source": "our-lotto",
+      "upstreamSource": "official",
+      "verified": false,
+      "period": "115000107",
+      "sourceUrl": "https://api.taiwanlottery.com/TLCAPIWeB/Lottery/Lotto649Result?period&month=2026-11&pageNum=1&pageSize=100"
     },
     "power": {
       "date": "2026-11-19",
@@ -41,31 +47,40 @@
         33
       ],
       "special": 3,
-      "source": "pilio",
-      "verified": false
+      "source": "our-lotto",
+      "upstreamSource": "official",
+      "verified": false,
+      "period": "115000093",
+      "sourceUrl": "https://api.taiwanlottery.com/TLCAPIWeB/Lottery/SuperLotto638Result?period&month=2026-11&pageNum=1&pageSize=100"
     },
     "3star": {
-      "date": "2026-11-20",
+      "date": "2026-11-21",
       "numbers": [
-        8,
-        3,
-        1
+        4,
+        5,
+        4
       ],
       "special": null,
-      "source": "pilio",
-      "verified": false
+      "source": "our-lotto",
+      "upstreamSource": "third",
+      "verified": false,
+      "period": "",
+      "sourceUrl": "https://www.pilio.idv.tw/"
     },
     "4star": {
-      "date": "2026-11-20",
+      "date": "2026-11-21",
       "numbers": [
-        1,
         4,
-        7,
-        9
+        5,
+        1,
+        4
       ],
       "special": null,
-      "source": "pilio",
-      "verified": false
+      "source": "our-lotto",
+      "upstreamSource": "third",
+      "verified": false,
+      "period": "",
+      "sourceUrl": "https://www.pilio.idv.tw/"
     }
   }
 }
