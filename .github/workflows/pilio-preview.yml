@@ -1,5 +1,14 @@
 name: Our Lotto preliminary draw previews (unverified)
 on:
+  # Immediately validate and refresh after sync code/workflow changes.
+  # Publishing docs/early-draws.json will NOT retrigger this workflow.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pilio-preview.yml'
+      - 'scripts/our_lotto_preview.py'
+      - 'scripts/pilio_preview.py'
+      - 'tests/test_*preview.py'
   schedule:
     # 20:05-22:55 Taipei time (UTC+8); GitHub schedules may be delayed.
     - cron: '5,15,25,35,45,55 12-14 * * *'
