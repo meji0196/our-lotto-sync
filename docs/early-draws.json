@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "issuedAt": "2026-11-22T03:06:19+08:00",
+  "issuedAt": "2026-11-23T03:29:08+08:00",
   "purpose": "PRELIMINARY_DISPLAY_ONLY",
   "games": {
     "539": {
@@ -18,23 +18,6 @@
       "verified": false,
       "period": "115000282",
       "sourceUrl": "https://api.taiwanlottery.com/TLCAPIWeB/Lottery/Daily539Result?period&month=2026-11&pageNum=1&pageSize=100"
-    },
-    "lotto649": {
-      "date": "2026-11-20",
-      "numbers": [
-        1,
-        2,
-        4,
-        12,
-        16,
-        38
-      ],
-      "special": 44,
-      "source": "our-lotto",
-      "upstreamSource": "official",
-      "verified": false,
-      "period": "115000107",
-      "sourceUrl": "https://api.taiwanlottery.com/TLCAPIWeB/Lottery/Lotto649Result?period&month=2026-11&pageNum=1&pageSize=100"
     },
     "3star": {
       "date": "2026-11-21",
