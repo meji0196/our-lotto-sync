@@ -1,60 +1,45 @@
 {
   "schemaVersion": 1,
-  "issuedAt": "2026-11-26T05:36:02+08:00",
+  "issuedAt": "2026-11-27T05:25:39+08:00",
   "purpose": "PRELIMINARY_DISPLAY_ONLY",
   "games": {
     "539": {
-      "date": "2026-11-25",
+      "date": "2026-11-26",
       "numbers": [
-        6,
         12,
-        29,
-        32,
-        34
+        13,
+        14,
+        21,
+        36
       ],
       "special": null,
       "source": "our-lotto",
       "upstreamSource": "official",
       "verified": false,
-      "period": "115000285",
+      "period": "115000286",
       "sourceUrl": "https://api.taiwanlottery.com/TLCAPIWeB/Lottery/Daily539Result?period&month=2026-11&pageNum=1&pageSize=100"
     },
-    "lotto649": {
-      "date": "2026-11-24",
-      "numbers": [
-        10,
-        11,
-        23,
-        24,
-        33,
-        42
-      ],
-      "special": 40,
-      "source": "our-lotto",
-      "upstreamSource": "official",
-      "verified": false,
-      "period": "115000108",
-      "sourceUrl": "https://api.taiwanlottery.com/TLCAPIWeB/Lottery/Lotto649Result?period&month=2026-11&pageNum=1&pageSize=100"
-    },
-    "3star": {
-      "date": "2026-11-25",
+    "power": {
+      "date": "2026-11-26",
       "numbers": [
         1,
-        0,
-        8
+        14,
+        18,
+        21,
+        31,
+        35
       ],
-      "special": null,
+      "special": 1,
       "source": "our-lotto",
       "upstreamSource": "official",
       "verified": false,
-      "period": "115000285",
-      "sourceUrl": "https://api.taiwanlottery.com/TLCAPIWeB/Lottery/3DResult?period&month=2026-11&pageNum=1&pageSize=100"
+      "period": "115000095",
+      "sourceUrl": "https://api.taiwanlottery.com/TLCAPIWeB/Lottery/SuperLotto638Result?period&month=2026-11&pageNum=1&pageSize=100"
     },
-    "4star": {
-      "date": "2026-11-25",
+    "3star": {
+      "date": "2026-11-26",
       "numbers": [
-        6,
-        7,
+        2,
         4,
         1
       ],
@@ -62,7 +47,22 @@
       "source": "our-lotto",
       "upstreamSource": "official",
       "verified": false,
-      "period": "115000285",
+      "period": "115000286",
+      "sourceUrl": "https://api.taiwanlottery.com/TLCAPIWeB/Lottery/3DResult?period&month=2026-11&pageNum=1&pageSize=100"
+    },
+    "4star": {
+      "date": "2026-11-26",
+      "numbers": [
+        7,
+        5,
+        5,
+        1
+      ],
+      "special": null,
+      "source": "our-lotto",
+      "upstreamSource": "official",
+      "verified": false,
+      "period": "115000286",
       "sourceUrl": "https://api.taiwanlottery.com/TLCAPIWeB/Lottery/4DResult?period&month=2026-11&pageNum=1&pageSize=100"
     }
   }
